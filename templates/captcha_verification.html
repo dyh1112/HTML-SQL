@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8"> <!-- 設定字元編碼為UTF-8，支持中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 設定視窗縮放比例，適應不同設備 -->
+    <title>Captcha Verification</title> <!-- 設定網頁標題 -->
+</head>
+<body>
+    <h1>Captcha Verification</h1> <!-- 顯示頁面標題 -->
+    
+    <!-- 註冊表單，將資料提交到 /student/validatemajor 路由 -->
+    <form action="/student/validatemajor" method="POST">
+        <!-- 輸入框，用戶輸入驗證碼 -->
+        <input type="text" name="captcha" placeholder="Enter CAPTCHA" required> <!-- placeholder 顯示提示文字，required 表示必須填寫 -->
+        
+        <!-- 顯示CAPTCHA圖片 -->
+        <img src="/captcha_image.png?rand={{ random() }}" alt="CAPTCHA Image" style="height:60px; width:200px;">
+
+        
+        <!-- 提交按鈕 -->
+        <button type="submit">Submit</button> <!-- 按下後提交表單 -->
+    </form>
+</body>
+</html>

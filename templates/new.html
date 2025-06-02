@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <title>安全表單範例</title>
+</head>
+<body>
+    <h1>請輸入您的名字</h1>
+    <form method="POST" action="/">
+        {{ form.hidden_tag() }}  <!-- 這裡是 CSRF token -->
+        {{ form.name.label }}: {{ form.name() }} <br/><br/>
+        {{ form.submit() }}
+    </form>
+</body>
+</html>
