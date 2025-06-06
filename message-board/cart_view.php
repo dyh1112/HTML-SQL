@@ -34,7 +34,7 @@ $result = $stmt->get_result();
 <body>
     <h2>🛒 您的購物車</h2>
 
-    <a href="cart_clear.php" style="color:red;">清空購物車</a> | <a href="index.php">回首頁</a>
+    <a href="cart_clear.php">清空購物車</a> | <a href="index.php">回首頁</a>
 
     <?php if ($result->num_rows > 0): ?>
     <table>
